@@ -1,6 +1,6 @@
 # Retail sales-line trends without misleading month comparisons
 
-Public-data learning study | Draft for review | Prepared with assistance
+Public-data learning study | Prepared with assistance
 
 This reuses the same verified retail calculation as the personal portfolio site draft. It examines UCI Online Retail, not a real client engagement. The name of this directory is provisional: the analysis is sales-line trends and cancellation handling, not a matched customer returns-rate study.
 
@@ -18,14 +18,14 @@ For complete-month comparisons the analysis uses January-November 2011 only: 459
 
 ## Reproduce
 
-Download and extract the original Excel file from the exact source link below. The large raw Excel is deliberately not included in the review ZIP.
+Download and extract the original Excel file from the exact source link below. The large raw Excel is deliberately not included in the repository.
 
 ```sh
 python -m pip install -r requirements.txt
-python analysis/analyze.py --retail '/path/to/Online Retail.xlsx'
+python analyze.py --retail '/path/to/Online Retail.xlsx'
 ```
 
-InvoiceNo and StockCode are read as text. Output aggregates and source-file SHA256 are under `data/`. The retail script is the portfolio site's implementation with only the unrelated synthetic-quality section removed. Its retail output was independently rerun from the original Excel and matched all the site's reported retail results exactly.
+InvoiceNo and StockCode are read as text. Output aggregates and source-file SHA256 are at the repository root. The retail script is the portfolio site's implementation with only the unrelated synthetic-quality section removed. Its retail output was independently rerun from the original Excel and matched all the site's reported retail results exactly.
 
 ## Source and license
 
