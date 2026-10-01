@@ -1,0 +1,15 @@
+# Review before a portfolio or interview
+
+Prepared with assistance. Do not claim unaided coding or a business deployment.
+
+Retail uses the original UCI Online Retail Excel. Install pandas and openpyxl, then run `python analysis/analyze.py --retail /path/to/Online\ Retail.xlsx` from the website folder.
+
+- Invoice numbers stay as text to preserve the cancellation prefix C.
+- Deduplication is a modeling choice. Compare results with and without it before an operational decision.
+- Quantity times UnitPrice gives sales-line value, not profit or net accounting revenue.
+- Positive sale lines exclude C invoices, non-positive quantities and non-positive prices.
+- December 2011 has only nine days, so the complete-month comparison ends in November.
+- Missing customer IDs remain for aggregate sales, but require separate treatment for customer segmentation.
+- One year's observations cannot establish stable seasonality or causation.
+
+Outputs are in data/results.json and the aggregate CSVs. Website text is static; re-check it if the script or source changes. Studies were prepared with assistance for this portfolio. Review and learn the method before an interview; do not claim unaided coding, a workplace deployment or real business impact.
